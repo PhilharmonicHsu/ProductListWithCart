@@ -1,0 +1,313 @@
+@charset "UTF-8";
+body {
+  background-color: #FDF8F5;
+}
+body #order-confirmed {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+body #order-confirmed .order-confirmed-card {
+  background-color: white;
+  width: 25rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+body #order-confirmed .order-confirmed-card h1 {
+  margin: 0.5rem 0;
+}
+body #order-confirmed .order-confirmed-card .confirmed-describe {
+  color: #837674;
+}
+body #order-confirmed .order-confirmed-card .confirmed-area #confirmed-list {
+  background-color: #FDF8F5;
+  padding: 1.5rem;
+  margin: 2rem 0 1rem 0;
+  border-radius: 10px;
+}
+body #order-confirmed .order-confirmed-card .confirmed-area #confirmed-list .confirmed-item {
+  display: flex;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.5px solid lightgray;
+}
+body #order-confirmed .order-confirmed-card .confirmed-area #confirmed-list .confirmed-item img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+body #order-confirmed .order-confirmed-card .confirmed-area #confirmed-list .confirmed-item .confirmed-item-detail {
+  position: relative;
+  width: 100%;
+}
+body #order-confirmed .order-confirmed-card .confirmed-area #confirmed-list .confirmed-item .confirmed-item-detail .confirmed-items-price {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+}
+body #order-confirmed .order-confirmed-card .confirmed-area #confirmed-list .confirmed-order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body #order-confirmed .order-confirmed-card .confirmed-area #confirmed-list .confirmed-order span {
+  font-size: 0.9rem;
+}
+body #order-confirmed .order-confirmed-card .confirmed-area #confirmed-list .confirmed-order strong {
+  font-size: 1.5rem;
+}
+body #order-confirmed .order-confirmed-card .confirmed-area #start-new-order {
+  background-color: #D42B00;
+  color: white;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 2rem;
+  border: none;
+}
+body #order-confirmed .order-confirmed-card .confirmed-area #start-new-order:hover {
+  cursor: pointer;
+  background-color: #A21F00;
+}
+
+main {
+  margin: 8rem;
+  display: flex;
+  justify-content: center;
+}
+main #dessert_area h1 {
+  font-size: 2.7rem;
+}
+main #dessert_area #desserts {
+  display: grid;
+  grid-template-columns: repeat(3, 16rem);
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+}
+main #dessert_area #desserts img {
+  width: 16rem;
+  height: 16rem;
+  border-radius: 10px;
+}
+main #dessert_area #desserts .item-card {
+  position: relative;
+  height: 26rem;
+}
+main #dessert_area #desserts .item-card .add-to-cart {
+  position: absolute;
+  top: 14.3rem;
+  left: 2rem;
+  width: 8rem;
+  background-color: white;
+  display: flex;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  border: 1px solid #837674;
+  justify-content: center;
+}
+main #dessert_area #desserts .item-card .add-to-cart svg {
+  padding-right: 0.5rem;
+}
+main #dessert_area #desserts .item-card .add-to-cart:hover {
+  cursor: pointer;
+}
+main #dessert_area #desserts .item-card .dessert-calculation {
+  position: absolute;
+  top: 14.3rem;
+  left: 2rem;
+  width: 12rem;
+  height: 1.4rem;
+  background-color: #D42B00;
+  display: flex;
+  padding: 1rem 0;
+  border-radius: 2rem;
+  border: 1px solid #D42B00;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+main #dessert_area #desserts .item-card .dessert-calculation .decrement, main #dessert_area #desserts .item-card .dessert-calculation .increment {
+  height: 1rem;
+  width: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 0;
+  background-color: #D42B00;
+}
+main #dessert_area #desserts .item-card .dessert-calculation .decrement:hover, main #dessert_area #desserts .item-card .dessert-calculation .increment:hover {
+  background-color: white;
+}
+main #dessert_area #desserts .item-card .dessert-calculation .decrement:hover svg, main #dessert_area #desserts .item-card .dessert-calculation .increment:hover svg {
+  cursor: pointer;
+}
+main #dessert_area #desserts .item-card .dessert-calculation .decrement:hover svg path, main #dessert_area #desserts .item-card .dessert-calculation .increment:hover svg path {
+  fill: #D42B00;
+}
+main #dessert_area #desserts .item-card .dessert-category {
+  position: absolute;
+  top: 19rem;
+  left: 0;
+  color: #837674;
+  font-size: 0.9rem;
+}
+main #dessert_area #desserts .item-card .dessert-name {
+  position: absolute;
+  top: 20.5rem;
+  left: 0;
+  font-size: 1rem;
+}
+main #dessert_area #desserts .item-card .dessert-price {
+  position: absolute;
+  top: 22.5rem;
+  left: 0;
+  font-size: 1.1rem;
+  color: #D42B00;
+}
+main #cart_area {
+  width: 100%;
+  height: 100%;
+  margin: 1.2rem 0 1.2rem 1.2rem;
+  padding: 1.5rem;
+  background-color: white;
+  color: #837674;
+  display: block;
+  border-radius: 10px;
+}
+main #cart_area h3 {
+  margin: 0;
+  color: #D42B00;
+  font-size: 1.3rem;
+}
+main #cart_area #cart-items #cart-ordered-list .cart-empty {
+  text-align: center;
+}
+main #cart_area #cart-items #cart-ordered-list .cart-ordered {
+  position: relative;
+  padding: 1rem 0;
+  border-bottom: 0.5px solid lightgray;
+}
+main #cart_area #cart-items #cart-ordered-list .cart-ordered .ordered-item-name {
+  color: black;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+main #cart_area #cart-items #cart-ordered-list .cart-ordered .remove-ordered-item {
+  position: absolute;
+  top: 2.2rem;
+  right: 0;
+  border: 1.5px solid #AE9C9D;
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+main #cart_area #cart-items #cart-ordered-list .cart-ordered .remove-ordered-item:hover {
+  cursor: pointer;
+  border: 1.5px solid #837674;
+}
+main #cart_area #cart-items #cart-ordered-list .cart-ordered .remove-ordered-item:hover svg path {
+  fill: #837674;
+}
+main #cart_area #cart-items .cart-inform .cashier {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+main #cart_area #cart-items .cart-inform .cashier .cashier-title {
+  font-size: 0.9rem;
+}
+main #cart_area #cart-items .cart-inform .cashier #total-price {
+  font-size: 1.5rem;
+  color: black;
+}
+main #cart_area #cart-items .cart-inform .cashier-inform {
+  display: flex;
+  justify-content: center;
+  font-size: 0.9rem;
+  background-color: #FDF8F5;
+  padding: 0.9rem 0;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+main #cart_area #cart-items .cart-inform .cashier-inform svg {
+  margin-right: 0.5rem;
+}
+main #cart_area #cart-items .cart-inform #confirm-order {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: #D42B00;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+}
+main #cart_area #cart-items .cart-inform #confirm-order:hover {
+  cursor: pointer;
+  background-color: #A21F00;
+}
+
+.ordered-item-amount {
+  color: #D42B00;
+  font-weight: bolder;
+  margin-right: 0.7rem;
+}
+
+.ordered-item-unit-price {
+  color: #AE9C9D;
+}
+
+.ordered-items-price {
+  color: #837674;
+}
+
+@media (min-width: 901px) and (max-width: 1300px) {
+  main {
+    margin: 6rem;
+    flex-direction: column;
+  }
+  main #cart_area {
+    width: auto;
+  }
+}
+@media (min-width: 601px) and (max-width: 980px) {
+  main {
+    margin: 4rem;
+    flex-direction: column;
+  }
+  main #dessert_area #desserts {
+    grid-template-columns: repeat(2, 16rem);
+  }
+  main #cart_area {
+    width: auto;
+  }
+}
+@media (max-width: 600px) {
+  main {
+    margin: 1rem;
+    flex-direction: column;
+  }
+  main #dessert_area #desserts {
+    grid-template-columns: repeat(1, 16rem);
+  }
+  main #cart_area {
+    width: auto;
+  }
+}
+.hidden {
+  display: none !important;
+}
+
+/*# sourceMappingURL=styles.css.map */
